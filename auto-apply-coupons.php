@@ -31,4 +31,13 @@ class AutoapplyingCoupons {
   }  
 }
  new AutoapplyingCoupons();
+
+/* procedural php */
+ add_action('woocommerce_cart_calculate_fees','auto_applying_coupons ', 20);
+ function auto_applying_coupons() {
+    $coupoun_code_applied = '20off';
+   $cart = WC()->cart;
+   if(!$cart->has_discount($coupoun_code_applied)) {
+       WC()->cart->apply_coupon( $coupoun_code_applied );
+ }
 ?>
