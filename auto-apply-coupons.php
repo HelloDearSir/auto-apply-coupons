@@ -13,7 +13,7 @@ WC tested up to: 7.0
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
-
+/* OOP php */
 class AutoapplyingCoupons {
  private string $applycoupons = "20off";
   public function __construct() {
@@ -32,7 +32,7 @@ class AutoapplyingCoupons {
 }
  new AutoapplyingCoupons();
 
-/* procedural php */
+/* procedural php  */
  add_action('woocommerce_cart_calculate_fees','auto_applying_coupons ', 20);
  function auto_applying_coupons() {
     $coupoun_code_applied = '20off';
