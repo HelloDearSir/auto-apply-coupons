@@ -1,1 +1,1 @@
-Using Woo hooks to auto apply coupons
+using woo logic to implement auto apply coupons 
